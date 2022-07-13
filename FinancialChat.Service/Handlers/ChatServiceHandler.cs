@@ -29,6 +29,9 @@ namespace FinancialChat.Service.Handlers
             if (_messageHandler.CommandDecoder(message.Text, out var command, out var parameter))
             {
                 await SendMessageToRobots($"{command} {parameter}");
+                message.Text = $"I asked financial-bot for: {command} {parameter}";
+                await SendMessageToUsers(message);
+                return;
             }
             await SendMessageToUsers(message);
         }
