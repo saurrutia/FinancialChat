@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "FinancialChat.Service";
+
+package FinancialChat;
+
+service ChatRoom{
+	rpc Join (stream RequestMessage) returns (stream ResponseMessage);
+}
+
+message RequestMessage{
+	string name = 1;
+	string text = 2;
+	enum ClientType{
+		USER = 0;
+		ROBOT = 1;
+	}
+	ClientType clientType= 3;
+}
+
+message ResponseMessage{
+	string text = 1;
+}

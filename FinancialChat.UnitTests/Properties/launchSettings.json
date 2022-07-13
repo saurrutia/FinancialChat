@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "FinancialChat.UnitTests": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "StockServiceUrl": "https://stooq.com/q/l/"
+      }
+    }
+  }
+}

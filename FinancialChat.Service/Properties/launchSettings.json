@@ -1,0 +1,15 @@
+﻿{
+  "profiles": {
+    "FinancialChat.Service": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5105;https://localhost:7105",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "Port": "7105",
+        "StockServiceUrl": "https://stooq.com/q/l"
+      }
+    }
+  }
+}
