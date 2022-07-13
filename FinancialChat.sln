@@ -7,11 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialChat.Service", "Fi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialChat.Client", "FinancialChat.Client\FinancialChat.Client.csproj", "{2F50C881-FE10-4F1E-A94F-6ED91D5BEF78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialChat.Bot", "FinancialChat.Bot\FinancialChat.Bot.csproj", "{34215613-3DDF-43E4-9979-40726A1EA6C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialChat.Bot", "FinancialChat.Bot\FinancialChat.Bot.csproj", "{34215613-3DDF-43E4-9979-40726A1EA6C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialChat.UnitTests", "FinancialChat.UnitTests\FinancialChat.UnitTests.csproj", "{9F2F888E-1CE8-4B87-A73C-B176BE204923}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialChat.UnitTests", "FinancialChat.UnitTests\FinancialChat.UnitTests.csproj", "{9F2F888E-1CE8-4B87-A73C-B176BE204923}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockService.Client", "StockService.Client\StockService.Client.csproj", "{4E52CD28-0387-45C9-BDEA-F6440361939C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockService.Client", "StockService.Client\StockService.Client.csproj", "{4E52CD28-0387-45C9-BDEA-F6440361939C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialChat.Infrastructure", "FinancialChat.Infrastructure\FinancialChat.Infrastructure.csproj", "{359093F5-02D0-4C82-B846-619A979879B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialChat.Domain", "FinancialChat.Domain\FinancialChat.Domain.csproj", "{1D494CFB-81A2-4192-8411-9567D5C13BBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialChat.Common", "FinancialChat.Common\FinancialChat.Common.csproj", "{32B45FB7-21D2-403E-BBB4-2A9966A4A5CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,18 @@ Global
 		{4E52CD28-0387-45C9-BDEA-F6440361939C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E52CD28-0387-45C9-BDEA-F6440361939C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E52CD28-0387-45C9-BDEA-F6440361939C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{359093F5-02D0-4C82-B846-619A979879B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{359093F5-02D0-4C82-B846-619A979879B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{359093F5-02D0-4C82-B846-619A979879B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{359093F5-02D0-4C82-B846-619A979879B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D494CFB-81A2-4192-8411-9567D5C13BBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D494CFB-81A2-4192-8411-9567D5C13BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D494CFB-81A2-4192-8411-9567D5C13BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D494CFB-81A2-4192-8411-9567D5C13BBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32B45FB7-21D2-403E-BBB4-2A9966A4A5CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B45FB7-21D2-403E-BBB4-2A9966A4A5CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B45FB7-21D2-403E-BBB4-2A9966A4A5CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B45FB7-21D2-403E-BBB4-2A9966A4A5CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,6 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.40.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinancialChat.Common\FinancialChat.Common.csproj" />
+    <ProjectReference Include="..\FinancialChat.Domain\FinancialChat.Domain.csproj" />
+    <ProjectReference Include="..\FinancialChat.Infrastructure\FinancialChat.Infrastructure.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Protobuf Include="Protos\chat-service.proto" GrpcServices="Server" />

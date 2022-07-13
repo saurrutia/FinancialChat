@@ -6,6 +6,16 @@ package FinancialChat;
 
 service ChatRoom{
 	rpc Join (stream RequestMessage) returns (stream ResponseMessage);
+	rpc Login (RequestLogin) returns (ResponseLogin);
+}
+
+message RequestLogin{
+	string username = 1;
+	string password = 2;
+}
+
+message ResponseLogin{
+	bool ok = 1;
 }
 
 message RequestMessage{

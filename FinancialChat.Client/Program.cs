@@ -12,8 +12,21 @@ var port = configuration.GetSection("Port")?.Value != null ? configuration.GetSe
 var channel = GrpcChannel.ForAddress($"https://localhost:{port}");
 var client = new ChatRoom.ChatRoomClient(channel);
 
-Console.WriteLine("Enter your username:");
-var userName = Console.ReadLine();
+var username = string.Empty;
+var password = string.Empty;
+Console.WriteLine("Welcome to Financial Chat.");
+do 
+{
+    Console.WriteLine("Enter your username:");
+    username = Console.ReadLine();
+    Console.WriteLine("Enter your password:");
+    password = Console.ReadLine();
+
+}
+while (!client.Login(new RequestLogin { Username = username, Password = password }).Ok);
+
+Console.WriteLine("Welcome to the chatroom.");
+
 using (var chat = client.Join())
 {
     _ = Task.Run(async () =>
@@ -25,7 +38,7 @@ using (var chat = client.Join())
         }
     });
 
-    await chat.RequestStream.WriteAsync(new RequestMessage { Name = userName, ClientType = RequestMessage.Types.ClientType.User, Text = $"{userName} has joined the room" });
+    await chat.RequestStream.WriteAsync(new RequestMessage { Name = username, ClientType = RequestMessage.Types.ClientType.User, Text = $"{username} has joined the room" });
 
     string line;
     while ((line = Console.ReadLine()) != null)
@@ -34,7 +47,7 @@ using (var chat = client.Join())
         {
             break;
         }
-        await chat.RequestStream.WriteAsync(new RequestMessage { Name = userName, ClientType = RequestMessage.Types.ClientType.User, Text = line });
+        await chat.RequestStream.WriteAsync(new RequestMessage { Name = username, ClientType = RequestMessage.Types.ClientType.User, Text = line });
     }
     await chat.RequestStream.CompleteAsync();
 }

@@ -6,16 +6,6 @@ namespace FinancialChat.Service.Handlers
     { 
         private readonly Regex _basicCommandRegex = new(@"^/(?<command>\w+)\s*=\s*(?<parameter>[a-zA-Z0-9_\.]*)");
 
-        private Dictionary<string, Action> _commandList = new()
-        {
-            {"stock", ()=> Console.WriteLine("Hola") }
-        };
-
-        public MessageHandler()
-        {
-            
-        }
-
         public bool CommandDecoder(string text, out string command, out string parameter)
         {
             command = string.Empty;
